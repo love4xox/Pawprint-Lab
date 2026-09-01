@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- 배경 부드러운 그라데이션 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9F2" />
+      <stop offset="100%" stop-color="#FFF0F5" />
+    </linearGradient>
+
+    <!-- 젤리 핑크 그라데이션 -->
+    <linearGradient id="pawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7597" />
+      <stop offset="100%" stop-color="#FF4D88" />
+    </linearGradient>
+
+    <!-- 그림자 효과 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- 전체 배경 -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- 다이어리 그리드 모눈종이 패턴 느낌 -->
+  <g opacity="0.15">
+    <line x1="100" y1="0" x2="100" y2="630" stroke="#E28743" stroke-width="2" stroke-dasharray="6,6" />
+    <line x1="1100" y1="0" x2="1100" y2="630" stroke="#E28743" stroke-width="2" stroke-dasharray="6,6" />
+    <line x1="0" y1="80" x2="1200" y2="80" stroke="#E28743" stroke-width="2" stroke-dasharray="6,6" />
+    <line x1="0" y1="550" x2="1200" y2="550" stroke="#E28743" stroke-width="2" stroke-dasharray="6,6" />
+  </g>
+
+  <!-- 왼쪽: 메인 폴라로이드 사진 카드 -->
+  <g transform="translate(140, 110) rotate(-6)" filter="url(#cardShadow)">
+    <!-- 흰색 폴라로이드 프레임 -->
+    <rect width="320" height="380" rx="16" fill="#FFFFFF" stroke="#F0ECE1" stroke-width="3" />
+    <!-- 내부 연핑크 사진 영역 -->
+    <rect x="25" y="30" width="270" height="260" rx="10" fill="#FFF0F5" />
+    <!-- 마스킹 테이프 -->
+    <rect x="95" y="-12" width="130" height="34" rx="4" fill="#FFE082" opacity="0.9" />
+
+    <!-- 폴라로이드 속 하트 발바닥 -->
+    <path d="M160 145 C130 110 95 138 108 178 C122 206 160 230 160 230 C160 230 198 206 212 178 C225 138 190 110 160 145 Z" fill="url(#pawGrad)" />
+    <circle cx="110" cy="115" r="16" fill="url(#pawGrad)" />
+    <circle cx="142" cy="96" r="17" fill="url(#pawGrad)" />
+    <circle cx="178" cy="96" r="17" fill="url(#pawGrad)" />
+    <circle cx="210" cy="115" r="16" fill="url(#pawGrad)" />
+
+    <text x="160" y="335" font-family="'Pretendard', sans-serif" font-size="22" font-weight="800" fill="#4A3E3D" text-anchor="middle">PAWPRINT DIARY</text>
+  </g>
+
+  <!-- 오른쪽: 텍스트 및 뱃지 영역 -->
+  <!-- 상단 스티커 뱃지 -->
+  <g transform="translate(540, 140)">
+    <rect width="280" height="42" rx="21" fill="#FFE3EC" />
+    <text x="140" y="27" font-family="'Pretendard', sans-serif" font-size="18" font-weight="700" fill="#FF4D88" text-anchor="middle">🎀 PAWPRINT DIARY 🐾</text>
+  </g>
+
+  <!-- 메인 타이틀 -->
+  <text x="540" y="260" font-family="'Pretendard', sans-serif" font-size="58" font-weight="800" fill="#2D2424">
+    발자국 다꾸 연구소 ✨
+  </text>
+
+  <!-- 서브 타이틀 -->
+  <text x="540" y="330" font-family="'Pretendard', sans-serif" font-size="24" font-weight="600" fill="#7A6E6D">
+    세상의 모든 댕냥이들이 따뜻한 가족을
+  </text>
+  <text x="540" y="370" font-family="'Pretendard', sans-serif" font-size="24" font-weight="600" fill="#7A6E6D">
+    만나도록 꾸미는 뽀짝 힐링 일기장
+  </text>
+
+  <!-- 하단 귀여운 다꾸 스티커 요소들 -->
+  <g transform="translate(540, 430)">
+    <!-- 태그 1 -->
+    <rect x="0" y="0" width="130" height="38" rx="8" fill="#FFF3CD" />
+    <text x="65" y="24" font-family="'Pretendard', sans-serif" font-size="16" font-weight="700" fill="#856404" text-anchor="middle">✏️ 프로필 다꾸</text>
+
+    <!-- 태그 2 -->
+    <rect x="145" y="0" width="130" height="38" rx="8" fill="#D1E7DD" />
+    <text x="210" y="24" font-family="'Pretendard', sans-serif" font-size="16" font-weight="700" fill="#0F5132" text-anchor="middle">🎧 힐링 사운드</text>
+
+    <!-- 태그 3 -->
+    <rect x="290" y="0" width="130" height="38" rx="8" fill="#F8D7DA" />
+    <text x="355" y="24" font-family="'Pretendard', sans-serif" font-size="16" font-weight="700" fill="#842029" text-anchor="middle">📖 집사 수칙</text>
+  </g>
+</svg>

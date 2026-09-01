@@ -1,0 +1,261 @@
+/* 상단 헤더 */
+.diary-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 35px 20px 25px;
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--panel-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.masking-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 140px;
+  height: 26px;
+  background: var(--tape-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.tape-center {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(1.5deg);
+  width: 90px;
+  height: 20px;
+  background: var(--tape-color);
+}
+
+.tape-corner {
+  position: absolute;
+  top: -8px;
+  right: 25px;
+  transform: rotate(12deg);
+  width: 70px;
+  height: 20px;
+  background: var(--tape-color);
+}
+
+#themeToggleBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sticker-badge {
+  display: inline-block;
+  background: #fff0f3;
+  color: var(--accent-pink);
+  border: 1.5px dashed var(--accent-pink);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.diary-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  font-family: 'Gaegu', cursive, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.diary-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* 탭 버튼 */
+.tab-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background: var(--panel-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-muted);
+  padding: 10px 4px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+.tab-btn span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.tab-btn.active {
+  background: var(--accent-pink);
+  color: #ffffff;
+  border-color: var(--accent-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 107, 139, 0.25);
+}
+
+/* 폴라로이드 카드 */
+.polaroid-card {
+  position: relative;
+  background: var(--panel-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 22px;
+}
+
+.card-tag, .sticker-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-pink);
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.diary-input, .diary-textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-color);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.diary-input:focus, .diary-textarea:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 3px rgba(255, 107, 139, 0.15);
+}
+
+.diary-btn-action {
+  width: 100%;
+  padding: 16px;
+  background: var(--accent-pink);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 139, 0.3);
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.diary-btn-action:hover {
+  opacity: 0.92;
+}
+
+.diary-btn-action:active {
+  transform: scale(0.98);
+}
+
+.work-name {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.diary-btn-link {
+  margin-top: 15px;
+  background: transparent;
+  border: none;
+  color: var(--accent-pink);
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.cute-divider {
+  height: 2px;
+  border-top: 2px dashed var(--border-color);
+  margin: 22px 0;
+}
+
+/* 로딩 애니메이션 */
+.loading-box {
+  text-align: center;
+  padding: 40px;
+}
+
+.diary-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--accent-pink);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: var(--accent-pink);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 폴라로이드 사진 프레임 (1:1 정사각형 비율 적용) */
+.polaroid-img-box {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 가로/세로 1:1 정사각형 고정 */
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 12px 0 16px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-color);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.polaroid-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 찌그러지지 않고 프레임에 꽉 차게 중앙 크롭 */
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.polaroid-card:hover .polaroid-img-box img {
+  transform: scale(1.05);
+}
