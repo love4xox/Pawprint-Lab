@@ -66,16 +66,33 @@ const UIModule = {
     // 이름 인자가 생략되었을 때 기본값 처리
     const petName = (typeof name === 'string' && generatedText) ? name : '댕냥이';
     const contentText = generatedText || name;
-
     const parsedHtml = parseDiaryMarkdown(contentText);
+
+    // 품종/이름에 따라 예시 영상 ID 매핑 (사모예드 구름이 / 랙돌 모찌 및 기본 댕냥이)
+    const videoId = petName.includes('구름') ? '170uYx24c-Q' : 'J---aiyznGQ';
 
     container.innerHTML = `
       <div class="tape-center"></div>
       <div class="card-tag">STICKER // RESULT</div>
       <h2 style="margin-top: 10px; margin-bottom: 15px; color: #ff4d87;">💖 ${petName}의 다이어리 페이지</h2>
+      
       <div class="diary-text-view">
         ${parsedHtml}
       </div>
+
+      <div class="diary-youtube-box" style="margin-top: 22px;">
+        <div class="card-tag" style="margin-bottom: 8px;">🎬 YOUTUBE // 뽀짝 순간 포착</div>
+        <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; border: 2px solid #ffe3e8; box-shadow: 0 4px 12px rgba(255, 182, 193, 0.12);">
+          <iframe 
+            style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border:0;" 
+            src="https://www.youtube.com/embed/${videoId}" 
+            title="댕냥이 뽀짝 영상" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
       <div class="result-actions-bar">
         <button type="button" class="btn-action-copy" onclick="copyDiaryText()">📋 글 복사하기</button>
         <button type="button" class="btn-action-discord" id="discordShareBtn" onclick="triggerDiscordShare('${petName}')">🐾 디스코드로 바로 쏘기</button>
