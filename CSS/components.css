@@ -281,20 +281,22 @@
   transform: scale(1.05);
 }
 
-/* 다이어리 손글씨, 줄간격 및 파스텔 줄노트 배경 효과 */
+/* 🎀 다이어리 본문 글씨체 및 크기 조정 (축소 및 감성 폰트 적용) */
 .diary-text-view {
-  font-family: 'Gaegu', cursive, sans-serif !important;
-  font-size: 1.25rem !important;
-  line-height: 1.85 !important;
+  font-family: 'Gamja Flower', cursive, sans-serif !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+  letter-spacing: -0.01em;
   color: #3f352f;
   word-break: keep-all;
+
   background-color: #fff9fb;
   background-image: repeating-linear-gradient(
     transparent,
-    transparent 31px,
-    #ffd6e5 32px
+    transparent 27px,
+    #ffd6e5 28px
   );
-  padding: 24px;
+  padding: 20px;
   border-radius: 12px;
   border: 1.5px dashed #ffb6c1;
   box-shadow: 0 4px 15px rgba(255, 182, 193, 0.15);
@@ -336,15 +338,15 @@
   font-size: 0.95rem;
 }
 
-/* 섹션 소제목 굵기 및 간격 */
+/* 섹션 소제목 크기도 비례해서 축소 */
 .diary-section-title {
-  font-size: 1.35rem;
+  font-size: 1.15rem !important;
   font-weight: 700;
   color: #2b2b2b;
-  margin-top: 20px;
-  margin-bottom: 8px;
+  margin-top: 18px;
+  margin-bottom: 6px;
   border-bottom: 1.5px dashed #ffd1dc;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 /* 결과창 하단 액션 버튼 그룹 */
