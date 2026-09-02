@@ -41,3 +41,37 @@ const UIModule = {
       `).join('');
     }
   };
+
+  // 결과 카드 렌더링 함수 내부 예시
+function renderResultCard(name, generatedText) {
+  const container = document.getElementById('resultContent');
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="tape-center"></div>
+    <div class="card-tag">STICKER // RESULT</div>
+    <h2>💖 ${name}의 다이어리 페이지</h2>
+    <div class="diary-text-view">${generatedText.replace(/\n/g, '<br>')}</div>
+    
+    <div class="result-btn-group" style="margin-top: 15px; display: flex; gap: 10px;">
+      <button type="button" class="diary-btn-action" onclick="handleSendDiscord('${name}')">
+        🚀 디스코드로 공유하기
+      </button>
+    </div>
+  `;
+}
+
+// 디스코드 버튼 클릭 이벤트 핸들러
+async function handleSendDiscord(name) {
+  const textElem = document.querySelector('.diary-text-view');
+  if (!textElem) return;
+  
+  const text = textElem.innerText;
+  try {
+    alert('디스코드로 전송 중입니다... 🐾');
+    await sendToDiscord(name, text);
+    alert('✨ 디스코드 채널로 다이어리가 성공적으로 발행되었습니다!');
+  } catch (e) {
+    alert('전송 실패: ' + e.message);
+  }
+}

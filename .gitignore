@@ -1,0 +1,20 @@
+# 환경 변수 및 보안 키 (깃허브 업로드 절대 금지)
+.env
+.env.local
+
+# 파이썬 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Vercel 및 가상환경
+.vercel
+venv/
+.venv/
+env/
+
+# OS 및 에디터 임시 파일
+.DS_Store
+Thumbs.db
+.vscode/
