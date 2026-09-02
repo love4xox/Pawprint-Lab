@@ -70,13 +70,7 @@ const UIModule = {
     const contentText = generatedText || name;
     const parsedHtml = parseDiaryMarkdown(contentText);
 
-    // 아이 이름/특성에 따라 귀여운 댕냥이 힐링 영상 ID 매핑
-    let videoId = '170uYx24c-Q'; // 기본: 귀여운 사모예드 영상
-    if (petName.includes('모찌') || petName.includes('고양이') || petName.includes('냥')) {
-      videoId = '4b92p6LwK-k'; // 귀여운 아기 고양이 힐링 영상
-    }
-
-    // 유튜브 검색 링크 URL (예: "사모예드 구름이 귀여운 영상" 검색)
+    // 유튜브 검색 링크 URL
     const youtubeSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(petName + ' 강아지 고양이 귀여운 영상')}`;
 
     container.innerHTML = `
@@ -88,22 +82,8 @@ const UIModule = {
         ${parsedHtml}
       </div>
 
-      <!-- 🎬 뽀짝 댕냥이 유튜브 영상 카드 -->
-      <div class="diary-youtube-box" style="margin-top: 22px;">
-        <div class="card-tag" style="margin-bottom: 8px;">🎬 YOUTUBE // ${petName}의 뽀짝 순간 포착</div>
-        <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; border: 2px solid #ffe3e8; box-shadow: 0 4px 12px rgba(255, 182, 193, 0.12);">
-          <iframe 
-            style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border:0;" 
-            src="https://www.youtube.com/embed/${videoId}" 
-            title="${petName} 뽀짝 영상" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
-      <!-- 하단 액션 버튼 그룹 (복사 / 디스코드 / 유튜브) -->
-      <div class="result-actions-bar">
+      <!-- 하단 액션 버튼 그룹 (동영상 제거 후 3개 버튼만 깔끔하게 노출) -->
+      <div class="result-actions-bar" style="margin-top: 20px;">
         <button type="button" class="btn-action-copy" onclick="copyDiaryText()">📋 글 복사하기</button>
         <button type="button" class="btn-action-discord" id="discordShareBtn" onclick="triggerDiscordShare('${petName}')">🐾 디스코드로 바로 쏘기</button>
         <a href="${youtubeSearchUrl}" target="_blank" rel="noopener noreferrer" class="btn-action-youtube" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
