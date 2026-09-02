@@ -1,4 +1,4 @@
-// 1. 마크다운 기호(>, *, 볼드)를 예쁜 다꾸 HTML로 파싱하는 함수
+// 1. 마크다운 기호(>, *, 볼드) 및 이모지(💌, 💕)를 예쁜 다꾸 HTML로 파싱하는 함수
 function parseDiaryMarkdown(text) {
   if (!text) return '';
   const lines = text.split('\n');
@@ -21,9 +21,10 @@ function parseDiaryMarkdown(text) {
       continue;
     }
 
-    // 인용구 (>) 처리
-    if (line.startsWith('>')) {
-      quoteBuffer.push(line.replace(/^>\s*/, ''));
+    // 인용구 (>) 또는 편지 이모지(💌, 💕)가 들어간 줄을 메모지 박스로 처리
+    if (line.startsWith('>') || line.startsWith('💌') || line.startsWith('💕')) {
+      const cleanLine = line.replace(/^[>💌💕]\s*/, '');
+      quoteBuffer.push(cleanLine);
       continue;
     } else {
       flushQuote();
