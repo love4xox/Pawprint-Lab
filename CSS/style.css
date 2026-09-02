@@ -1,3 +1,7 @@
 @import url('base.css');
 @import url('layout.css');
 @import url('components.css');
+
+body {
+  background: #fff4f6 !important;
+}
