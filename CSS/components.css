@@ -378,3 +378,21 @@
 .btn-action-copy:hover {
   background: #e5e7eb;
 }
+
+/* 상단 헤더 & 메인 카드 테두리를 은은한 파스텔 핑크로 변경 */
+.diary-header,
+.polaroid-card {
+  border: 2px solid #ffe3e8 !important;
+  box-shadow: 0 8px 24px rgba(255, 182, 193, 0.18) !important;
+}
+
+/* 비활성 탭 버튼 테두리 & 배경도 포근하게 정돈 */
+.tab-btn {
+  border: 2px solid #ffe8ed !important;
+  background: #ffffff !important;
+}
+
+.tab-btn:hover {
+  border-color: #ffd1dc !important;
+  background: #fffafa !important;
+}
