@@ -170,5 +170,4 @@ Pawprint-Lab/
 ---
 
 ## 13. 배포 주소
-* 🌟 **Pawprint Diary 배포 링크**: [https://pawprint-lab.vercel.app/](https://pawprint-lab.vercel.app/)
-````[cite: 1]
+🌟 **Pawprint Diary 배포 링크**: [https://pawprint-lab.vercel.app/](https://pawprint-lab.vercel.app//)
