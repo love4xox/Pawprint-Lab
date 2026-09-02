@@ -10,6 +10,7 @@
   box-shadow: var(--card-shadow);
 }
 
+/* 🎀 마스킹 테이프 위치 및 회전 정의 */
 .masking-tape {
   position: absolute;
   top: -12px;
@@ -17,8 +18,6 @@
   transform: translateX(-50%) rotate(-1deg);
   width: 140px;
   height: 26px;
-  background: var(--tape-color);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
 .tape-center {
@@ -28,7 +27,6 @@
   transform: translateX(-50%) rotate(1.5deg);
   width: 90px;
   height: 20px;
-  background: var(--tape-color);
 }
 
 .tape-corner {
@@ -38,7 +36,15 @@
   transform: rotate(12deg);
   width: 70px;
   height: 20px;
-  background: var(--tape-color);
+}
+
+/* 💜 1. 연보라색 마스킹 테이프 컬러 적용 */
+.masking-tape,
+.tape-top,
+.tape-center,
+.tape-corner {
+  background: rgba(224, 204, 250, 0.85) !important;
+  box-shadow: 0 1px 3px rgba(180, 150, 210, 0.2);
 }
 
 #themeToggleBtn {
@@ -237,7 +243,7 @@
 /* 폴라로이드 사진 프레임 (1:1 정사각형 비율 적용) */
 .polaroid-img-box {
   width: 100%;
-  aspect-ratio: 1 / 1; /* 가로/세로 1:1 정사각형 고정 */
+  aspect-ratio: 1 / 1;
   height: auto;
   border-radius: 12px;
   overflow: hidden;
@@ -250,7 +256,7 @@
 .polaroid-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 이미지가 찌그러지지 않고 프레임에 꽉 차게 중앙 크롭 */
+  object-fit: cover;
   object-position: center;
   display: block;
   transition: transform 0.3s ease;
@@ -260,13 +266,23 @@
   transform: scale(1.05);
 }
 
-/* 다이어리 손글씨 및 줄간격 스타일 */
+/* 다이어리 손글씨, 줄간격 및 파스텔 줄노트 배경 효과 */
 .diary-text-view {
   font-family: 'Gaegu', cursive, sans-serif !important;
   font-size: 1.25rem !important;
   line-height: 1.85 !important;
   color: #3f352f;
   word-break: keep-all;
+  background-color: #fff9fb;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #ffd6e5 32px
+  );
+  padding: 24px;
+  border-radius: 12px;
+  border: 1.5px dashed #ffb6c1;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.15);
 }
 
 /* 인용문 (>) -> 스크랩북 메모지 박스 변환 */
@@ -291,7 +307,7 @@
   box-shadow: 2px 2px 10px rgba(255, 77, 135, 0.07);
 }
 
-/* 리스트 항목 (*) -> 뽀짝 발자국 */
+/* 리스트 항목 (*) -> 🐾 발자국 */
 .diary-list-item {
   position: relative;
   padding-left: 24px;
@@ -357,24 +373,4 @@
 
 .btn-action-copy:hover {
   background: #e5e7eb;
-}
-
-.diary-text-view {
-  font-family: 'Gaegu', cursive, sans-serif !important;
-  font-size: 1.25rem !important;
-  line-height: 1.85 !important;
-  color: #3f352f;
-  word-break: keep-all;
-
-  /* 🎀 파스텔 줄노트 배경 효과 */
-  background-color: #fff9fb;
-  background-image: repeating-linear-gradient(
-    transparent,
-    transparent 31px,
-    #ffd6e5 32px
-  );
-  padding: 24px;
-  border-radius: 12px;
-  border: 1.5px dashed #ffb6c1;
-  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.15);
 }
