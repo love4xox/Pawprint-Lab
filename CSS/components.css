@@ -391,3 +391,24 @@
 .btn-action-copy:hover {
   background: #e5e7eb;
 }
+
+/* 유튜브 바로가기 버튼 */
+.btn-action-youtube {
+  background: #ffffff;
+  color: #cc0000;
+  border: 1.5px solid #ffccd5;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.08);
+}
+
+.btn-action-youtube:hover {
+  background: #fff0f3;
+  border-color: #ff4d6d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.15);
+}
